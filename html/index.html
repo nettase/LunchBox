@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Kyselylomake</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="style.css" rel="stylesheet" type="text/css">
+                    
+                        <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
+        
+    
+	</head>
+	<body>
+        <div class="container">
+
+        <h3>Kyselyn otsikko</h3>
+        
+        <p>kuvaus</p>
+
+        
+          <form action="/action_page.php">
+              <label for="ika">Ikä</label><br><br>
+              <label class="">
+              <input type="radio">15-25<br>
+              <input type="radio">26-35<br>
+              <input type="radio">35-<br>
+              </label><br>
+              
+                <label for="ika">Oppilaitos</label><br><br>
+              <label class="">
+              <input type="radio">Haaga-Helia<br>
+              <input type="radio">SLK<br>
+              
+              </label><br>
+              
+              
+              <label for="kerrat">Kuinka usein syöt keskimäärin kouluruokalassa?</label><br><br>
+              <label class="">
+              <input type="radio">Lähes joka päivä<br>
+              <input type="radio">Pari kertaa viikossa<br>
+              <input type="radio">Muutaman kerran kuukaudessa<br>
+              <input type="radio">En juuri koskaan<br>
+              
+              </label><br><br>
+              
+              <label for="maksutapa">Mitä maksutapaa käytät pääsääntöisesti kouluruokailun maksamiseen?</label><br><br>
+              <label class="">
+              <input type="checkbox">Korttimaksu
+              <span class="checkmark"></span>
+              </label><br>      
+              <label class="">
+              <input type="checkbox" >Lähimaksu kortilla
+              <span class="checkmark"></span>
+              </label> <br>
+             <label class="">
+              <input type="checkbox">Mobiilimaksu
+              <span class="checkmark"></span>
+            </label><br>
+            <label class="">
+              <input type="checkbox">Käteismaksu
+              <span class="checkmark"></span>
+            </label><br><br>
+              
+            <label for="opiskelijastatus">Millä pääsääntöisesti todistat opiskelijastatuksesi maksutapahtuman yhteydessä?</label><br><br>
+              <label class="">
+              <input type="checkbox">Opiskelijakortti
+              <span class="checkmark"></span>
+              </label><br>      
+              <label class="">
+              <input type="checkbox" >Kelan ateriatukikortti
+              <span class="checkmark"></span>
+              </label> <br>
+             <label class="">
+              <input type="checkbox">Frank App
+              <span class="checkmark"></span>
+            </label><br>
+            
+              <br>
+              <label for="subject">Miten kouluruokalan nykyinen maksu- ja jonotuskäytäntö mielestäsi toimii?</label><br><br>
+                <textarea id="subject" name="subject" placeholder="esimerkiksi mikä toimii, mitä parannettavaa, minkälaisia ongelmia" style="height:100px; width:400px";></textarea><br><br>
+              
+      
+              
+              <label for="ongelmat">
+              <p>Kuinka usein viikossa joudut jättämään ruokailun pitkien jonojen vuoksi väliin? (0-5 kertaa)</p>
+                <input type="range" min="0" max="5" value="2.5">
+                <p>0</p>  
+              </label><br><br>
+              
+              <label for="tottumukset">
+              <p>Kuinka tottunut olet käyttämään itsepalveluautomaatteja maksamiseen ylipäätään? (0 = en lainkaan tottunut 5 = todella tottunut)</p>
+                <input type="range" min="0" max="5" value="2.5">
+                <p>0</p>  
+              </label><br><br>
+              
+              <label for="">
+              <p>Mitä mieltä olisit, mikäli maksun voisi suorittaa itsepalveluautomaatilla? (0 = en pidä ajatuksesta 5 = todella hyvä idea)</p>
+                <input type="range" min="0" max="5" value="2.5">
+                <p>0</p>  
+              </label><br><br>
+              
+              <label for="nopeuttaako">Koetko itsepalveluautomaattien nopeuttavan maksutoimintaa?</label><br><br>
+              <label class="">
+              <input type="checkbox">Kyllä
+              <span class="checkmark"></span>
+              </label><br>      
+              <label class="">
+              <input type="checkbox" >Ei
+              <span class="checkmark"></span>
+              </label> <br><br>
+              
+             
+              <label for="subject">Mitkä ominaisuudet itsepalveluautomaatilla ovat mielestäsi tärkeimpiä?</label><br><br>
+                <textarea id="subject" name="subject" placeholder="" style="height:100px; width:400px";></textarea><br><br>
+              
+              
+            
+          </form>
+            
+            <button>Lähetä</button>
+        </div>
+
+        
+       
+    </body>
+
+</html>
