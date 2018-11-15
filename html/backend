@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="">
+	<head>
+        
+        <link rel="stylesheet" type="text/css" href="tyyli.css">
+		<meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+        
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<title>Kysely</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        
+    
+	</head>
+	<body>
+        
+        <img src="banneri.png" id="banneri" alt="">
+    <form>
+        <div id="lomake">
+       
+            <p>Toteutamme kyselyn tutkiaksemme Haaga-Helian Pasilan kampuksen kouluruokalan maksukäytäntöjen automatisointimahdollisuutta. Kyselyn tavoitteena on selvittää Haaga-Helia ammattikorkea koulun sekä SLK:n opiskelijoiden kokemuksia nykyisten maksukäytäntöjen toimiuudesta sekä mielipiteitä ruokailumaksun mahdollisesta automatisoinnista.</p><br><br>
+                
+        </div>
+        <div id="container">
+            <button onclick="lahetaLomake()">Lähetä</button></div>
+        
+        <div id="palaute"></div>
+        
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+        </script>
+        
+    
+        
+           <script> 
+               var lomakekentta = []; //tähän id-tunnukset
+               $.getJSON("https://codingschmoding.herokuapp.com/questions", function( data ) {
+                var items = []; 
+                
+                 $.each(data, function(key, d){
+                      items.push(d.question + "<br><input type='text' id="+ d.questionId +"><br><br>"); 
+                     //kerätään id tunnukset
+                     lomakekentta.push(d.questionId);
+                 })
+
+                   
+
+                $( "<div/>", {
+                    html: items.join( "" )
+                    }).appendTo( "#lomake" );
+                  }); 
+               
+               function lahetaLomake(){
+                  var vastaus;
+                  var tunnus; 
+                   for (i=0; i<lomakekentta.length; i++){
+                    vastaus = document.getElementById(lomakekentta[i]).value;  
+                       
+                    alert("{'id':"+lomakekentta[i]+",'vastaus':'"+response+"'}");
+                    
+                   }  
+               }
+               
+                      var myJSON = JSON.stringify(lahetys);
+
+                        $.ajax({
+                         url: 'https://codingschmoding.herokuapp.com/responses',
+                         type: 'POST',
+                         dataType: 'json',
+                         data: jsonData, 
+                         success: function() { alert('POST completed. Data:' + myJSON)}
+                        });
+
+
+     </script>
+        
+       
+</form>
+    </body>
+
+</html>
